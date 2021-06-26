@@ -46,7 +46,7 @@
     </modules>
 
     <properties>
-        <jdk.version>15</jdk.version>
+        <jdk.version>16</jdk.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <lombok.version>1.18.20</lombok.version>
@@ -244,7 +244,7 @@
                             <excludes>
                                 <exclude>**/PerformanceTest.java</exclude>
                             </excludes>
-                            <argLine>@{argLine} --enable-preview</argLine>
+                            <argLine>@{argLine} --enable-preview --illegal-access=permit</argLine>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -289,7 +289,7 @@
                         <configuration>
                             <excludes>
                                 <exclude>**/PerformanceTest.java</exclude>
-                                <argLine>@{argLine} --enable-preview</argLine>
+                                <argLine>@{argLine} --enable-preview --illegal-access=permit</argLine>
                             </excludes>
                         </configuration>
                     </plugin>
@@ -410,7 +410,7 @@
                     <version>${maven.surefire.plugin.version}</version>
                     <configuration>
                         <parallelMavenExecution>false</parallelMavenExecution>
-                        <argLine>@{argLine} --enable-preview</argLine>
+                        <argLine>@{argLine} --enable-preview --illegal-access=permit</argLine>
                     </configuration>
                 </plugin>
                 <!-- jacoco plugin configuration -->
